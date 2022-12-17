@@ -22,6 +22,28 @@
 </ul>
 
 <style>
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translateY(30%) 
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) 
+    }
+  }
+
+  @keyframes appearSide {
+    0% {
+      opacity: 0;
+      transform: translateX(-30%) 
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0) 
+    }
+  }
+
   ul {
     display:flex;
     flex-direction: column;
@@ -40,10 +62,21 @@
     border-radius: 5rem;
     cursor:pointer;
     background: #222;
+    transition: all .2s ease;
+  }
+
+  ul li:nth-child(odd) {
+    animation: .5s appear linear;
+  }
+
+  ul li:nth-child(even) {
+    animation: .5s appearSide linear;
   }
 
   ul li:hover {
     background: #ff6f20;
     color: #222;
+    transform: scale(1.1);
+
   }
 </style>
