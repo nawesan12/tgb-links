@@ -18,6 +18,6 @@
     justify-content: center;
     flex-direction: column;
     height: 25vh;
-    font-size: 1.1rem;
+    font-size: .9rem;
   }
 </style>
